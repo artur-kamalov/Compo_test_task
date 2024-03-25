@@ -84,7 +84,7 @@
           <div class="product-buttons">
             <app-button (btnClickEvent)="addPurchaseToCart()" *ngIf="!purchasesCounter; else PurchasesCounterBtn" class="purchase-btn" [size]="'bigSz'">
               <img src="assets/icons/Shopping-cart-white.svg" alt="">
-              <span class="fs-14">В корзину</span>
+              <span class="fs-14 clr-white">В корзину</span>
             </app-button>
             <app-like-button/>
             <ng-template #PurchasesCounterBtn>
