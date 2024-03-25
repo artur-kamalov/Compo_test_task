@@ -1,0 +1,26 @@
+@import 'vars';
+@import 'mixins';
+
+.like-button {
+  position: relative;
+  display: flex;
+  height: 56px;
+  width: 72px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  background: $brand-ghost;
+  cursor: pointer;
+
+  &__input {
+    position: absolute; 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

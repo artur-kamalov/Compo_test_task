@@ -1,0 +1,70 @@
+@import 'vars';
+@import 'mixins';
+
+.button-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  border-radius: 8px;
+  width: max-content;
+
+  background-color: $brand-primary;
+  color: $special-white;
+
+  transition: 0.25s ease;
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -ms-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+
+  &.bigSz {
+    height: 56px;
+    padding: 16px 24px;
+    width: 100%;
+  }
+  &.normalSz {  
+    height: 48px;
+    padding: 12px 24px;
+  }
+  &.smallSz {
+    height: 32px;
+    padding: 8px 12px;
+  }
+
+  &:hover:enabled {
+    @include mq(sm) {
+      background-color: $brand-hover;
+      box-shadow: 0px 12px 16px -7px rgba(21, 81, 229, 0.44);
+    }
+  }
+  &:active:enabled {
+    background-color: $brand-hover;
+    box-shadow: 0px 12px 16px -7px rgba(21, 81, 229, 0.44);
+  }
+  
+
+  &.lightTh {
+    background-color: $brand-ghost;
+    color: $brand-primary;
+
+    &:hover:enabled {
+      @include mq(sm) {
+        background-color: $brand-ghost;
+        box-shadow: 0px 12px 16px -7px rgba(21, 81, 229, 0.44);
+      }
+    }
+    &:active:enabled {
+      background-color: $brand-ghost;
+      box-shadow: 0px 12px 16px -7px rgba(21, 81, 229, 0.44);
+    }
+    
+  }
+}
+
+.button-primary:disabled {
+  background-color: $special-disabled-secondary;
+  color: $special-disabled-primary;
+}
+

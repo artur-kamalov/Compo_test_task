@@ -1,0 +1,76 @@
+<header class="header">
+  <div class="header__top">
+    <!-- Лого -->
+    <a href="">
+      <img src="assets/icons/Logo.svg" alt="Logo">
+    </a>
+
+    <!-- Меню -->
+    <app-button>
+      <img src="assets/icons/Menu_icon.svg" alt="Menu">
+      <span class="fs-14 clr-white">Меню</span>
+    </app-button>
+
+    <!-- Строка ввода запроса -->
+    <div class="header-search">
+      <app-input [styles]="styles" [placeholder]="'Введите ваш запрос'"/>
+      <div class="header-search__btns">
+        <button class="header-search__btns-btn">
+          <img src="assets/icons/Cross.svg" alt="Reset">
+        </button>
+        <button class="header-search__btns-btn">
+          <img src="assets/icons/Search.svg" alt="Search">
+        </button>
+      </div>
+    </div>
+
+    <!-- Информация о пользователе -->
+    <div class="user-info">
+      <a href="">
+        <img class="notifies" src="assets/icons/Bell.svg" alt="notifies">
+      </a>
+      <hr class="vertical" />
+      <a href="">
+        <img class="favorites" src="assets/icons/Like_black_secondary.svg" alt="favorites">
+      </a>
+
+      <app-button [theme]="'lightTh'">
+        <img src="assets/icons/Shopping-cart.svg" alt="shop">
+        144 235P
+      </app-button>
+
+      <!-- Профиль -->
+      <div class="profile">
+        <img class="profile__img" src="assets/images/Avatar.png" alt="Avatar">
+        <p class="profile__name">
+          Ермаков Е.
+        </p>
+        <button class="profile__menu">
+          <img src="assets/icons/Chevron-down.svg" alt="menu">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="border">
+    <div class="header__bottom">
+      <ul class="left">
+        <li><a href="#!">Мои заказы</a></li>
+        <li><a href="#!">Сотрудники</a></li>
+        <li><a href="#!">Шаблоны заказов</a></li>
+        <li><a href="#!">Обращения</a></li>
+      </ul>
+      <div class="right">
+        <app-button [size]="'smallSz'" [theme]="'lightTh'">
+          <img src="assets/icons/message-circle.svg" alt="">
+          Ваш менеджер
+        </app-button>
+        <a href="">
+          <img src="assets/icons/percent.svg" alt="">
+          Акции
+        </a>
+        <a href="">Блог</a>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,186 @@
+<section>
+  <div class="product-wrapper">
+    <ul class="categories">
+      <li><a href="">Каталог</a></li>
+      <li><a href="">Обувь</a></li>
+      <li><a href="">Кроссовки</a></li>
+      <li><a href="">Беговые</a></li>
+    </ul>
+
+    <h2 class="product-title">Кроссовки мужские Skechers Sunny Dale</h2>
+
+    <div class="product-content">
+      <!-- Фото -->
+      <div class="product-content-images">
+        <img class="current-img" src="assets/images/prod1.png" alt="">
+        <div class="img-slider">
+          <button>
+            <img src="assets/icons/arrow-left.svg" alt="">
+          </button>
+          <ul class="img-list">
+            <li><img src="assets/images/prod2.png" alt=""></li>
+            <li><img src="assets/images/prod3.png" alt=""></li>
+            <li><img src="assets/images/prod4.png" alt=""></li>
+            <li><img src="assets/images/prod5.png" alt=""></li>
+          </ul>
+          <button>
+            <img src="assets/icons/arrow-right.svg" alt="">
+          </button>
+        </div>
+      </div>
+      <!-- Покупка  -->
+      <div class="product-content-info">
+        <div class="product-order">
+          <div class="product-pricing">
+            <span class="
+              clr-danger-primary
+              fs-14 
+              fw-500"
+            >
+              166 534.00 цена без скидки
+            </span>
+            <span 
+              class="
+              final-prise
+              fs-32 
+              fw-700
+              "
+            >
+              122 566 ₽ 
+              <span class="
+                discount
+                fs-16
+                fw-700
+                clr-white
+              ">
+                -15%
+              </span>
+          </span>
+          </div>
+
+          <div class="product-packaging">
+            <span class="items-in-package">12 штук в уп.</span>
+            <app-toggle-button/>
+            <span>Заказ упаковкой</span>
+          </div>
+
+          <hr class="horizontal">
+
+          <ul class="delivery-info">
+            <li class="delivery-info__item">
+              <span class="fw-700 fs-14">Завтра</span> 
+              <span class="fw-400 clr-black-secondary fs-12">Доставка</span>
+            </li>
+            <li class="delivery-info__item">
+              <span class="fw-700 fs-14">7 шт.</span> 
+              <span class="fw-400 clr-black-secondary fs-12">Тарасовка</span>
+            </li>
+            <li class="delivery-info__item">
+              <span class="fw-700 fs-14">7 шт.</span> 
+              <span class="fw-400 clr-black-secondary fs-12">Тарасовка</span>
+            </li>
+          </ul>
+          <!-- Добавление в корзину -->
+          <div class="product-buttons">
+            <app-button (btnClickEvent)="addPurchaseToCart()" *ngIf="!purchasesCounter; else PurchasesCounterBtn" class="purchase-btn" [size]="'bigSz'">
+              <img src="assets/icons/Shopping-cart-white.svg" alt="">
+              <span class="fs-14">В корзину</span>
+            </app-button>
+            <app-like-button/>
+            <ng-template #PurchasesCounterBtn>
+              <div class="purchases-counter">
+                <button (click)="removePurchaseFromCart()">
+                  <img src="assets/icons/minus.svg" alt="">
+                </button>
+
+                <span class="fs-16 fw-500">
+                  {{purchasesCounter}} 
+                  {{morph(purchasesCounter, ['штука', 'штуки', 'штук'])}}
+                </span>
+
+                <button (click)="addPurchaseToCart()">
+                  <img src="assets/icons/plus.svg" alt="">
+                </button>
+              </div>
+            </ng-template>
+            
+
+          </div>
+        </div>
+
+        <hr class="vertical" />
+        <!-- Характеристики -->
+        <div class="product-properties">
+          <h4 class="product-properties-title">
+            Характеристики
+          </h4>
+          <div class="product-properties-grid">
+            <div class="product-properties-grid__item">
+              <span class="fw-700 fs-14">
+                ELC00696
+              </span>
+              <span class="fw-400 fs-12 clr-black-secondary">
+                Код поставщика
+              </span>
+            </div>  
+            <div class="product-properties-grid__item">
+              <span class="fw-700 fs-14">
+                ELC0200000696
+              </span>
+              <span class="fw-400 fs-12 clr-black-secondary">
+                Артикул
+              </span>
+            </div>
+            <div class="product-properties-grid__item">
+              <span class="fw-700 fs-14">
+                ELC00696
+              </span>
+              <span class="fw-400 fs-12 clr-black-secondary">
+                Код РАЭК
+              </span>
+            </div>
+            <div class="product-properties-grid__item">
+              <span class="fw-700 fs-14">
+                ELC00696
+              </span>
+              <span class="fw-400 fs-12 clr-black-secondary">
+                Код ЕТМ
+              </span>
+            </div>
+            <div class="product-properties-grid__item">
+              <span class="fw-700 fs-14">
+                Electric used
+              </span>
+              <span class="fw-400 fs-12 clr-black-secondary">
+                Бренд
+              </span>
+            </div>
+            <div class="product-properties-grid__item">
+              <span class="fw-700 fs-14">
+                ELC00696
+              </span>
+              <span class="fw-400 fs-12 clr-black-secondary">
+                Серия
+              </span>
+            </div>
+            <div class="product-properties-grid__item">
+              <span class="fw-700 fs-14">
+                ELC0200000696
+              </span>
+              <span class="fw-400 fs-12 clr-black-secondary">
+                Код производителя 
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- Описание -->
+        <div class="product-description">
+          <h3 class="product-description__title">Описание товара</h3>
+          <p class="product-description__paragraph">
+            Создание приверженного покупателя специфицирует неопровержимый комплексный анализ ситуации. CTR существенно индуцирует из ряда вон выходящий SWOT-анализ. Воздействие на потребителя определяет возрастающий интеграл по поверхности, что известно даже школьникам. Отсюда естественно следует, что коммуникация уравновешивает косвенный фактор коммуникации. Поле направлений естественно допускает экспериментальный скачок функции, таким образом сбылась мечта идиота - утверждение полностью доказано. Арифметическая прогрессия притягивает линейно зависимый пул лояльных изданий.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

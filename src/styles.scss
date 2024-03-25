@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+
+* {
+  color: $black-primary;
+}
+html, body{
+  background: $special-white;
+  font-family: Gotham, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+input, textarea {
+  outline: none;
+  border: 1px black solid;
+}
+// Ограничение контента
+section {
+  max-width: 1680px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: $black-primary;
+}
+hr.vertical {
+  border: 0;
+  margin: 0;
+  border-left: 1px solid $special-divider;
+  height: 48px;
+  float: left;
+}
+hr.horizontal {
+  border: 0;
+  margin: 0;
+  border-top: 1px solid $special-divider;
+  width: 48px;
+  float: left;
+}
+
+// font styles
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-700 {
+  font-weight: 700;
+}
+
+.fs-12 {
+  font-size: 12px;
+  line-height: 16px;
+}
+.fs-14 {
+  font-size: 14px;
+  line-height: 16px;
+}
+.fs-16 {
+  font-size: 16px;
+  line-height: 20px;
+}
+.fs-32 {
+  font-size: 32px;
+}
+//colors
+.clr-brand-primary {
+  color: $brand-primary;
+}
+.clr-danger-primary {
+  color: $danger-primary;
+}
+.clr-danger-secondary {
+  color: $danger-secondary;
+}
+.clr-black-primary {
+  color: $black-primary;
+}
+.clr-black-secondary {
+  color: $black-secondary;
+}
+.clr-white {
+  color: #FFF;
+}
+.clr-general-secondary {
+  color: $general-secondary;
+}

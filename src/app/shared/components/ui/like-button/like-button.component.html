@@ -1,0 +1,14 @@
+<label class="like-button">
+  <input (change)="toggleLike($event)" [checked]="isLiked" type="checkbox" class="like-button__input">
+  <img 
+    class="like-button__icon" 
+    [src]="'assets/icons/Like.svg'"
+    *ngIf="isLiked; else notLiked"
+  >    
+  <ng-template #notLiked>
+    <img 
+      class="like-button__icon" 
+      [src]="'assets/icons/Like_border.svg'"
+    >    
+  </ng-template>
+</label>

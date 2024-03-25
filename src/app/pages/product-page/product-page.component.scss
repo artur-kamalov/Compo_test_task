@@ -1,0 +1,221 @@
+@import 'vars';
+
+.product-wrapper {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.categories {
+  display: flex;
+  margin-bottom: 8px;
+
+  & li a {
+    color: $black-secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  & li + li:before {
+    content: "/";
+    display: inline-block;
+    padding: 0 4px;  
+    color: $black-secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
+.product-title {
+  color: $black-primary;
+  font-family: "Gotham Pro";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+.product-content {
+  display: grid;
+  gap: 48px;
+  grid-template-columns: 400px auto;
+}
+// блок фото
+.product-content-images {
+
+}
+.current-img {
+  border-radius: 24px;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 24px;
+}
+.img-slider {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+
+  & button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 64px;
+    border-radius: 8px;
+    background-color: $brand-ghost;
+    transition: 0.1s ease;
+
+    &:hover {
+      box-shadow: 0px 12px 16px -7px rgba(21, 81, 229, 0.44);
+    }
+  }
+}
+.img-list {
+  display: flex;
+  gap: 12px;
+  align-items:center; 
+
+  & li img {
+    border-radius: 16px;
+  }
+}
+// блок информации о товаре
+.product-content-info {
+  display: grid;
+  padding: 0 24px;
+  gap: 48px;
+  grid-template-areas: 
+  "topL hr topR"
+  "bot bot bot"
+  ;
+  grid-template-columns: 372px 1px 636px;
+}
+// блок цен и покупки
+.product-order {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  grid-area: topL;
+}
+.product-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.final-prise {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.discount{
+  display: inline-block;
+  height: 22px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: $danger-primary;
+}
+.product-packaging {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 26px;
+}
+.items-in-package {
+  display: inline-block;
+  padding: 8px;
+  background-color: $brand-ghost;
+  border-radius: 8px;
+  color: $black-secondary;
+  font-size: 14px;
+  line-height: 16px;
+}
+.delivery-info {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+.product-buttons {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  justify-items: right;
+}
+.purchase-btn {
+  flex-grow: 1;
+}
+.purchases-counter {
+  // opacity: 0;
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid $brand-primary;
+  border-radius: 8px;
+  padding: 14px;
+
+  & button {
+    width: 24px;
+    height: 24px;
+    background: none;
+  }
+}
+// блок характеристик
+.product-properties {
+  grid-area: topR;
+  padding-top: 4px;
+
+  &-title {
+    margin-bottom: 32px;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 302px 302px;
+    gap: 28px 32px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+}
+// блок описания
+.product-description {
+  grid-area: bot;
+
+  &__title {
+    color: $black-primary;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 24px;
+  }
+
+  &__paragraph {
+    color: $black-primary;
+    font-family: Gotham;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}
+
+
+hr.vertical {
+  height: 100%;
+  grid-area: hr;
+}
+
+hr.horizontal {
+  width: 372px;
+}
